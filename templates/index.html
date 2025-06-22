@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="progress-bar">
+    <div id="progress"></div>
+    <span id="label">Viewed: 0%</span>
+  </div>
+
+  <div class="content">
+    {% for i in range(100) %}
+      <p>Paragraph {{ i+1 }} - This is the test only.</p>
+    {% endfor %}
+  </div>
+
+  <div id="tip-box">Tip: Start scrolling!</div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
